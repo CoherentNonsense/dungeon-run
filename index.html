@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maze And Movement</title>
+    <meta name="description" content="A maze with movement">
+    <meta name="author" content="Casey Tai">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="./styles-Tai.css">
+
+    <!--
+        Change Log:
+            November 05: document created
+            November 06: made menu boxes
+            November 07: started making the js
+            November 08: started map generation
+            November 12: made movement
+            November 13: made levels and stuff
+            November 14: made enemies do things but poorly
+            November 15: finished enemy things and fixed bugs. pun not intended
+            November 16: made game over | combined 5 js files into one
+
+        EVALUATION:
+            INIT:
+                [DONE]create an array of arrays
+                [DONE]create an object for the maze with properties and methods
+                [DONE]create an object for the animated character with properties and methods
+                [DONE]access properties within an object using this.
+                [DONE]link to jQuery
+            PROCESS:
+                [DONE]use nested loops to generate a maze
+                [DONEish]use if statements to determine which image to show in the maze
+                [DONE]use if statements to do something different for each direction key
+                [DONE]use math to determine a top and left position for each maze image
+                [DONE]use math to determine a top and left position for the animated character
+            OUTPUT:
+                [DONE]use .innerHTML to add code to your page
+                [DONE]use .src to change an image
+                [DONE]fade something in from invisible to visible
+                [DONE]animate movement using jQuery
+                [DONE]change the movement easing in jQuery to "linear"
+            STYLE:
+                [DONE]honour all previous //STYLE sections
+                [DONE]use descriptive variable names
+                [DONE]break up methods and function into separate ones for input, processing, and output
+                [DONE]use descriptive comments to identify and describe each method or function, and each loop:
+                //loop through each element of the loop to create the rows
+                [DONE]add spaces between mathematical and string operators,
+                for example: var exampleVar = "hello " + "kitty", not var exampleVar="hello "+"kitty".
+
+    -->
+</head>
+<body>
+    <div id="gameContainer">
+        
+    </div>
+
+    <template id="menuTemplate">
+        <div id="menuOne" class="menuContainer">
+            <p class="menuTitle">Maze</p>
+            <button id="howToPlayButton" class="orangeButton menuButton" type="button">how to play</button>
+            <button id="startButton" class="greenButton menuButton" type="button">start</button>
+        </div>
+        <div id="menuTwo" class="menuContainer">
+            <button id="backButton" type="button">back</button>
+            <p class="menuTitle">Another</p>
+            <div id="rules">GOAL: get through as many rooms as possible.<br><br> Each room has an exit in the top right corner. You need to get the key in order to get though it.</div>
+        </div>
+    </template>
+
+    <template id="gameTemplate">
+        <div id="gameBoard"></div>
+        <div id="entityBoard"></div>
+        <div id="enemyBoard"></div>
+        <div id="ui">
+            <div>Level : <span id="level">1</span></div>
+            <div>Health : <span id="health">3</span></div>
+            <div>Score : <span id="score">0</span></div>
+        </div>
+    </template>
+    
+    <script src="./main-Tai.js"></script>
+</body>
+</html>

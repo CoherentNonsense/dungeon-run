@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC|Staatliches&display=swap');
+/* 'Bowlby One SC', 'Staatliches' */
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Staatliches', Arial, Helvetica, sans-serif
+}
+
+/********/
+/* MENU */
+/********/
+body {
+    background-color: #222;
+}
+
+.menuContainer {
+    background-color: #fff;
+    box-sizing: border-box;
+    width: 20%;
+    padding: 1rem;
+    box-shadow: #000 5px 5px 20px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menuTitle {
+    font-family: 'Bowlby One SC';
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+}
+.menuButton {
+    box-sizing: border-box;
+    width: 49%;
+    height: 2rem;
+    border: none;
+    border-radius: 4px;
+}
+
+.orangeButton {
+    background-color: rgb(238, 185, 87);
+}
+.greenButton {
+    background-color: rgb(126, 209, 106);
+}
+
+/* HTP */
+#rules {
+    width: 100%;
+    height: 5rem;
+}
+
+/* GAME */
+#gameBoard, #entityBoard, #enemyBoard {
+    background-color: grey;
+    width: 50vw;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.tile {
+    position: absolute;
+    width: 5vw;
+    height: 10vw;
+}
+#ui {
+    margin: 0.2rem;
+    font-size: 2.5rem;
+    color: #fff;
+}
+#level {
+    color: blue;
+}
+#health {
+    color: red;
+}
+#score {
+    color: yellow;
+}
+#player {
+    z-index: 100
+}
